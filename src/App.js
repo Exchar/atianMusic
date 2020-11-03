@@ -4,24 +4,37 @@ import Home from "./pages/Home";
 import Community from "./pages/Community";
 import EleTv from "./pages/EleTv";
 import Mine from "./pages/Mine";
-import Nav from "./pages/Nav";
-//引入顶部导航
 
+
+//引入顶部导航
+import Nav from "./pages/Nav";
+import Container from "@material-ui/core/Container"
+import VideoDetail from "./pages/MvDetail";
+import { Layout } from 'antd';
+const { Header, Footer, Sider, Content } = Layout;
 function App() {
     return (
         <div className="App">
-
-            <div>
-                <Router>
-                    <Nav/>
-                    <Route path="/" exact component={Home}/>
-                    <Route path="/home" component={Home}></Route>
-                    <Route path="/eleTv" component={EleTv}></Route>
-                    <Route path="/community" component={Community}></Route>
-                    <Route path="/mine" component={Mine}></Route>
-                </Router>
-            </div>
-
+            <Container>
+                <div>
+                    <Layout>
+                        <Router>
+                        <Header>
+                            <Nav/>
+                        </Header>
+                        <Content>
+                            <Route path="/" exact component={Home}/>
+                            <Route path="/home" component={Home}></Route>
+                            <Route path="/eleTv" component={EleTv}></Route>
+                            <Route path="/community" component={Community}></Route>
+                            <Route path="/mine" component={Mine}></Route>
+                            <Route path="/videoDetail/:mvid?" component={VideoDetail}></Route>
+                        </Content>
+                        <Footer>Footer</Footer>
+                        </Router>
+                    </Layout>
+                </div>
+            </Container>
         </div>
     );
 }

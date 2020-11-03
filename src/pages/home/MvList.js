@@ -4,23 +4,30 @@
  *Project: netbaseMusic
  */
 import React from "react"
+import "./list.css"
+import {Link} from "react-router-dom"
 
 class MvList extends React.Component {
     render() {
         let mvListEle = [];
-        if (this.props.newMvs){
-            mvListEle = this.props.newMvs.map(item=>{
+        if (this.props.newMvs) {
+            mvListEle = this.props.newMvs.map(item => {
                 return (
                     <div className="listItem" key={item.id}>
-                        <img src={item.cover} alt="封面"/>
+                        <Link to={{pathname: `/videoDetail/${item.id}`}}>
+                            <img src={item.cover} alt="封面"/>
+                        </Link>
                     </div>
+
                 )
             })
         }
-        console.log(this.props)
         return (
-            <div>
-                {mvListEle}
+            <div className="newMvsContainer">
+                <h2>最新MV</h2>
+                <div className="homeList">
+                    {mvListEle}
+                </div>
             </div>
         )
     }

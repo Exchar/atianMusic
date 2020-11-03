@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+//引入mobx
+import store from "./store";
+import {Provider} from "mobx-react"
+import "antd/dist/antd.css"
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+      <Provider {...store}>
+          <App />
+      </Provider>,
   document.getElementById('root')
 );
 

@@ -12,7 +12,7 @@ export function getNewMvs(data){
         url: URL.newMvs,
         method: 'get',
         dataType: "json",
-        data: data
+        params: data
     })
 }
 
@@ -23,6 +23,36 @@ export function getTopArtists(data){
         method: 'get',
         dataType: "json",
         contentType: "application/x-www-form-urlencoded;charset=UTF-8",
-        data: data
+        params: data
+    })
+}
+//获取mv详情
+export function getMvDetail(data){
+    return server({
+        url: URL.mvDetail,
+        method: 'get',
+        dataType: "json",
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        params: data
+    })
+}
+//获取mv点赞等详情
+export function getMvDetailInfo(data){
+    return server({
+        url: URL.mvDetailInfo,
+        method: 'get',
+        dataType: "json",
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        params: data
+    })
+}
+//获取mv的播放链接
+export function getMvUrl(data){
+    return server({
+        url: URL.mvUrl,
+        method: 'get',
+        dataType: "json",
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        params: data
     })
 }

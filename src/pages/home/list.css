@@ -1,0 +1,16 @@
+.homeList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  .homeList .listItem {
+    width: 23%;
+    margin-bottom: 20px;
+    padding: 6px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    text-align: center; }
+    .homeList .listItem img {
+      width: 90%;
+      margin: auto; }
+
+/*# sourceMappingURL=list.css.map */
