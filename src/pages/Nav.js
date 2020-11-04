@@ -6,7 +6,7 @@
 import React from "react"
 import {Link} from "react-router-dom";
 import {Menu} from 'antd';
-import {AppstoreOutlined, MailOutlined} from '@ant-design/icons';
+import {RocketTwoTone,CustomerServiceTwoTone,SmileTwoTone,StarTwoTone} from '@ant-design/icons';
 
 
 class Nav extends React.Component {
@@ -27,22 +27,22 @@ class Nav extends React.Component {
         return (
             <Menu onClick={this.handleClick} selectedKeys={[current]} mode="horizontal">
 
-                <Menu.Item key="home" icon={<MailOutlined/>}>
+                <Menu.Item key="home" icon={<SmileTwoTone twoToneColor='#eb2f96'/>}>
                     <Link to="/home">
                         音乐汇
                     </Link>
                 </Menu.Item>
-                <Menu.Item key="eleTv" icon={<AppstoreOutlined/>}>
+                <Menu.Item key="eleTv" icon={<RocketTwoTone twoToneColor='#eb2f96'/>}>
                     <Link to="/eleTv">
                         电台
                     </Link>
                 </Menu.Item>
-                <Menu.Item key="cate" icon={<AppstoreOutlined/>}>
+                <Menu.Item key="cate" icon={<StarTwoTone twoToneColor='#eb2f96'/>}>
                     <Link to="/community">
-                        歌单分类
+                        音乐社区
                     </Link>
                 </Menu.Item>
-                <Menu.Item key="mine" icon={<AppstoreOutlined/>}>
+                <Menu.Item key="mine" icon={<CustomerServiceTwoTone twoToneColor='#eb2f96'/>}>
                     <Link to="/mine">
                         我的Style
                     </Link>

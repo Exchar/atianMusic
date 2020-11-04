@@ -16,3 +16,14 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.ant-layout-content{
+  border-radius: 4px !important;
+  background-color: rgb(253 253 253 / 80%) !important;
+  position: relative;
+}
+.slick-dots{
+  transition: all .4s;
+}
+.slick-dots:hover{
+  transform: scale(2);
+}

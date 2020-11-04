@@ -15,7 +15,24 @@ export function getNewMvs(data){
         params: data
     })
 }
-
+//获取首页信息
+export function getHomePageBlock(data){
+    return server({
+        url: URL.homePageBlock,
+        method: 'get',
+        dataType: "json",
+        params: data
+    })
+}
+//获取首页banner
+export function getBanner(data){
+    return server({
+        url: URL.banner,
+        method: 'get',
+        dataType: "json",
+        params: data
+    })
+}
 //获取热门艺术家
 export function getTopArtists(data){
     return server({
@@ -50,6 +67,16 @@ export function getMvDetailInfo(data){
 export function getMvUrl(data){
     return server({
         url: URL.mvUrl,
+        method: 'get',
+        dataType: "json",
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        params: data
+    })
+}
+//获取音乐详情
+export function getMusicDetail(data){
+    return server({
+        url: URL.musicDetail,
         method: 'get',
         dataType: "json",
         contentType: "application/x-www-form-urlencoded;charset=UTF-8",

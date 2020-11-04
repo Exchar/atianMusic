@@ -1,0 +1,11 @@
+.ant-layout-content{
+    padding: 6px;
+}
+@media (min-width: 1800px){
+    .MuiContainer-maxWidthLg{
+        max-width: 1700px !important;
+    }
+}
+.musicDetailBackImg{
+    position: relative;
+}

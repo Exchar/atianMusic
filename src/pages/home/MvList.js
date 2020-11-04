@@ -15,7 +15,13 @@ class MvList extends React.Component {
                 return (
                     <div className="listItem" key={item.id}>
                         <Link to={{pathname: `/videoDetail/${item.id}`}}>
-                            <img src={item.cover} alt="封面"/>
+                            <div className="mvImgOuter">
+                                <img src={item.cover} alt="封面"/>
+                            </div>
+                            <div className="mvItemDesc">
+                                <p>{item.name}--{item.artistName}</p>
+                                <p>{item.playCount}次播放</p>
+                            </div>
                         </Link>
                     </div>
 
@@ -24,9 +30,23 @@ class MvList extends React.Component {
         }
         return (
             <div className="newMvsContainer">
-                <h2>最新MV</h2>
+                <p>
+                    <span className="hasDesc">
+                    最新MV
+                </span>
+                    </p>
                 <div className="homeList">
                     {mvListEle}
+                    <div className="listItem">
+                        <Link to={{pathname: `/mvMore`}}>
+                            <div className="mvImgOuter">
+                                <img src="" alt="封面"/>
+                            </div>
+                            <div className="mvItemDesc">
+                               <p>查看更多>>></p>
+                            </div>
+                        </Link>
+                    </div>
                 </div>
             </div>
         )

@@ -5,12 +5,44 @@
   .homeList .listItem {
     width: 23%;
     margin-bottom: 20px;
-    padding: 6px;
+    padding: 10px;
     background-color: #ffffff;
     border-radius: 6px;
-    text-align: center; }
+    text-align: center;
+    box-shadow: -1px 2px 3px 0 #b6b6b6;
+    position: relative;
+    min-height: 200px;
+    transition: all .6s; }
+    .homeList .listItem:hover {
+      transform: scale(1.1);
+      background-color: rgba(0, 0, 0, 0.2); }
+      .homeList .listItem:hover img {
+        transform: translateY(3px) scale(1.05); }
+      .homeList .listItem:hover .mvItemDesc {
+        transform: translateY(8px); }
+        .homeList .listItem:hover .mvItemDesc p {
+          color: #d61d1d !important; }
+    .homeList .listItem .mvImgOuter {
+      width: 100%;
+      min-height: 165px; }
     .homeList .listItem img {
-      width: 90%;
-      margin: auto; }
+      width: 100%;
+      margin: auto;
+      box-shadow: 0 0 5px 1px #c8c8c8;
+      border-radius: 4px;
+      transition: all .6s; }
+    .homeList .listItem .mvItemDesc {
+      display: flex;
+      justify-content: space-around;
+      font-size: .7em;
+      transition: all .4s; }
+      .homeList .listItem .mvItemDesc p {
+        text-align: left;
+        font-family: "PingFang SC";
+        color: #e55da4;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: all .4s; }
 
 /*# sourceMappingURL=list.css.map */

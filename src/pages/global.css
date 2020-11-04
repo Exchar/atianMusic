@@ -1,0 +1,34 @@
+p > span.hasDesc {
+  position: relative;
+  padding: 10px;
+  font-size: 1.1em;
+  font-weight: 500; }
+  p > span.hasDesc:before {
+    content: "";
+    position: absolute;
+    left: -2px;
+    width: 4px;
+    height: 50%;
+    background: #eb2f96;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; }
+  p > span.hasDesc:after {
+    content: "\266B";
+    position: absolute;
+    right: -2px;
+    width: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+
+.ant-carousel .slick-dots li button {
+  background-color: #d61d1d !important; }
+
+/*# sourceMappingURL=global.css.map */
