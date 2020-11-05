@@ -4,7 +4,7 @@
   height: 200px;
 }
 .musicDetail{
-  position: relative;
+  p-osition: relative;
   .musicDetailMain{
     position: absolute;
     top: 0;
@@ -15,6 +15,7 @@
   &>div{
     text-align: center;
   }
+  //顶部栏
   .topAction{
     padding: 10px;
     .title{
@@ -26,6 +27,22 @@
         text-shadow: 1px 2px 5px #cd1c1c;
       }
 
+    }
+  }
+  //操作按钮
+  .actionBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    padding: 10px;
+    color: red;
+    margin-top: 20px;
+    .pauseMusic{
+      font-size: 2em;
+    }
+    &>div{
+      margin: 0 8px;
     }
   }
   .backImg{

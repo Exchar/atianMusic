@@ -9,6 +9,8 @@ import {Image} from "antd"
 import "./MusicDetail.css"
 import {observer,inject} from "mobx-react";
 import {Link} from "react-router-dom"
+import * as Icon from "@ant-design/icons"
+import {LeftCircleTwoTone} from "@ant-design/icons"
 @inject("musicStore")
 @observer
 class MusicDetail extends React.Component {
@@ -20,7 +22,8 @@ class MusicDetail extends React.Component {
             songInfo:{},
             ids:"",
             albumInfo:{},
-            singers:[]
+            singers:[],
+            isPlaying:false
         }
     }
     bindSinger(arr){
@@ -36,6 +39,13 @@ class MusicDetail extends React.Component {
             )
         })
         return singers
+    }
+    bindPlayState(){
+        if (this.state.isPlaying){
+            return(<Icon.PauseCircleTwoTone twoToneColor="#fa0e0ef0"/>);
+        }else{
+            return (<Icon.PlayCircleTwoTone twoToneColor="lightgrey"/>);
+        }
     }
     async componentWillMount() {
         console.log(this.props)
@@ -104,7 +114,15 @@ class MusicDetail extends React.Component {
                     </div>
                     {/*    操作按钮*/}
                     <div className="actionBtn">
-
+                        <div className="prevMusic">
+                            <Icon.LeftCircleTwoTone twoToneColor="#fa0e0ef0"/>
+                        </div>
+                        <div className="pauseMusic">
+                            {this.bindPlayState()}
+                        </div>
+                        <div className="nextMusic">
+                            <Icon.RightCircleTwoTone twoToneColor="#fa0e0ef0"/>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -24,7 +24,7 @@ function App() {
                         <Header>
                             <Nav/>
                         </Header>
-                        <Content style={{marginTop:"10px",backgroundColor:"rgb(240,242,245)",borderRadius:"10px"}}>
+                        <Content style={{backgroundColor:"rgb(240,242,245)",borderRadius:"10px"}}>
                             <Route path="/" exact component={Home}/>
                             <Route path="/home" component={Home}></Route>
                             <Route path="/eleTv" component={EleTv}></Route>

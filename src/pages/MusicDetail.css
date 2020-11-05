@@ -4,7 +4,7 @@
   height: 200px; }
 
 .musicDetail {
-  position: relative; }
+  p-osition: relative; }
   .musicDetail .musicDetailMain {
     position: absolute;
     top: 0;
@@ -22,6 +22,18 @@
       letter-spacing: .2em; }
       .musicDetail .topAction .title p {
         text-shadow: 1px 2px 5px #cd1c1c; }
+  .musicDetail .actionBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    padding: 10px;
+    color: red;
+    margin-top: 20px; }
+    .musicDetail .actionBtn .pauseMusic {
+      font-size: 2em; }
+    .musicDetail .actionBtn > div {
+      margin: 0 8px; }
   .musicDetail .backImg {
     opacity: .4;
     top: 0;

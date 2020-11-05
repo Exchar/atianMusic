@@ -2,7 +2,7 @@
   "name": "atianmusic",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:9000",
+  "proxy": "http://47.110.60.226:9000",
   "dependencies": {
     "@babel/core": "7.12.3",
     "@material-ui/core": "^4.11.0",

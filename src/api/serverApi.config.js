@@ -10,7 +10,7 @@
  *
  **/
 
-const HISTORY= 'http://localhost:9000';
+const HISTORY= 'http://47.110.60.226:9000';
 const URL ={
     homePageBlock:HISTORY+"/homepage/block/page", //首页部分信息
     banner:HISTORY+"/banner",//首页banner
