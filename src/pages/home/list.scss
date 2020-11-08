@@ -12,7 +12,7 @@ $border-myStyle: 1px solid red;
     text-align: center;
     box-shadow:-1px 2px 3px 0 #b6b6b6;
     position: relative;
-    min-height: 200px;
+    min-height: 3%;
     transition: all .6s;
     &:hover{
       transform: scale(1.1);
@@ -29,8 +29,6 @@ $border-myStyle: 1px solid red;
     }
     .mvImgOuter{
       width: 100%;
-      min-height: 165px;
-
     }
     img{
       width: 100%;
@@ -42,7 +40,7 @@ $border-myStyle: 1px solid red;
     .mvItemDesc{
       display: flex;
       justify-content: space-around;
-      font-size: .7em;
+      font-size: .9em;
       transition: all .4s;
       p{
         text-align: left;

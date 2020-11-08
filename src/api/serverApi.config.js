@@ -24,6 +24,9 @@ const URL ={
     mvDetail:HISTORY+'/mv/detail', //获取视频详情
     mvUrl:HISTORY+'/mv/url', //获取视频的链接
     mvDetailInfo:HISTORY+'/mv/detail/info', //获取视频的评论等详情
-    musicDetail:HISTORY+"/song/detail"
+    musicDetail:HISTORY+"/song/detail",
+    musicUrl:HISTORY+"/song/url", //获取音乐的播放链接
+    musicLyric:HISTORY+"/lyric", //获取音乐的歌词
+    musicIsAvai:HISTORY+"/check/music", //检查音乐是否可用
 }
 export default URL

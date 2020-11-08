@@ -83,3 +83,33 @@ export function getMusicDetail(data){
         params: data
     })
 }
+//获取音乐url
+export function getMusicUrl(data){
+    return server({
+        url: URL.musicUrl,
+        method: 'get',
+        dataType: "json",
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        params: data
+    })
+}
+//获取音乐歌词
+export function getMusicLyric(data){
+    return server({
+        url: URL.musicLyric,
+        method: 'get',
+        dataType: "json",
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        params: data
+    })
+}
+//检查音乐是否可用
+export function checkMusicIsAvai(data){
+    return server({
+        url: URL.musicIsAvai,
+        method: 'get',
+        dataType: "json",
+        contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+        params: data
+    })
+}

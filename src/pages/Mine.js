@@ -9,9 +9,6 @@ import {inject,observer} from "mobx-react";
 @inject("CountTwo")
 @observer
 class Mine extends React.Component {
-    constructor(props) {
-        super(props);
-    }
     addNumOne(){
         this.props.CountOne.addNum1();
     }

@@ -10,7 +10,7 @@ import "./MusicDetail.css"
 import {observer,inject} from "mobx-react";
 import {Link} from "react-router-dom"
 import * as Icon from "@ant-design/icons"
-import {LeftCircleTwoTone} from "@ant-design/icons"
+import {message} from "antd";
 @inject("musicStore")
 @observer
 class MusicDetail extends React.Component {
@@ -23,11 +23,34 @@ class MusicDetail extends React.Component {
             ids:"",
             albumInfo:{},
             singers:[],
-            isPlaying:false
+            isPlaying:JSON.parse(sessionStorage.getItem("isPlaying"))
+        }
+    }
+    playMusic(id){
+        if (!sessionStorage.getItem("nowMusic")){
+            this.props.musicStore.getMusicUrl(id).then(res=>{
+                let url = res.data[0].url;
+                console.log(url)
+                this.props.musicStore.nowMusic = url;
+            }).catch(e=>{
+                message.error("发生了未知错误")
+            })
+        }
+        if (this.state.isPlaying){
+            this.setState({
+                isPlaying:false
+            },()=>{
+                this.props.musicStore.pauseMusic()
+            })
+        }else{
+            this.setState({
+                isPlaying:true
+            },()=>{
+                this.props.musicStore.playMusic()
+            })
         }
     }
     bindSinger(arr){
-        console.log(arr)
         let singers = arr.map(item=>{
             return (
                 <Link to={{pathname:`/singerDetail/${item.id}`}} key={item.id}>
@@ -40,15 +63,7 @@ class MusicDetail extends React.Component {
         })
         return singers
     }
-    bindPlayState(){
-        if (this.state.isPlaying){
-            return(<Icon.PauseCircleTwoTone twoToneColor="#fa0e0ef0"/>);
-        }else{
-            return (<Icon.PlayCircleTwoTone twoToneColor="lightgrey"/>);
-        }
-    }
     async componentWillMount() {
-        console.log(this.props)
         await this.setState({
             ids:this.props.match.params.ids
         })
@@ -74,12 +89,13 @@ class MusicDetail extends React.Component {
 
     render() {
         let {songInfo,albumInfo} = this.state;
+        let {musicStore}  = this.props;
         console.log(songInfo)
         return (
             <div className="musicDetail">
                     {/*背景图*/}
                     <div className="backImg">
-                        <Image src={albumInfo.picUrl}/>
+                        <Image src={albumInfo.picUrl} height="100%" style={{minHeight:"80%"}} placeholder={<Image src={albumInfo.picUrl}/>}/>
                     </div>
                     <div className="musicDetailMain">
                     {/*顶部---标题，返回按钮*/}
@@ -117,8 +133,8 @@ class MusicDetail extends React.Component {
                         <div className="prevMusic">
                             <Icon.LeftCircleTwoTone twoToneColor="#fa0e0ef0"/>
                         </div>
-                        <div className="pauseMusic">
-                            {this.bindPlayState()}
+                        <div className="pauseMusic" >
+                            {this.state.isPlaying?<Icon.PauseCircleTwoTone onClick={this.playMusic.bind(this,this.state.ids)} twoToneColor="#fa0e0ef0" />:<Icon.PlayCircleTwoTone onClick={this.playMusic.bind(this,this.state.ids)} twoToneColor="lightgrey" />}
                         </div>
                         <div className="nextMusic">
                             <Icon.RightCircleTwoTone twoToneColor="#fa0e0ef0"/>

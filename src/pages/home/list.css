@@ -11,7 +11,7 @@
     text-align: center;
     box-shadow: -1px 2px 3px 0 #b6b6b6;
     position: relative;
-    min-height: 200px;
+    min-height: 3%;
     transition: all .6s; }
     .homeList .listItem:hover {
       transform: scale(1.1);
@@ -23,8 +23,7 @@
         .homeList .listItem:hover .mvItemDesc p {
           color: #d61d1d !important; }
     .homeList .listItem .mvImgOuter {
-      width: 100%;
-      min-height: 165px; }
+      width: 100%; }
     .homeList .listItem img {
       width: 100%;
       margin: auto;
@@ -34,7 +33,7 @@
     .homeList .listItem .mvItemDesc {
       display: flex;
       justify-content: space-around;
-      font-size: .7em;
+      font-size: .9em;
       transition: all .4s; }
       .homeList .listItem .mvItemDesc p {
         text-align: left;

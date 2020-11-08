@@ -31,4 +31,7 @@ p > span.hasDesc {
 .ant-carousel .slick-dots li button {
   background-color: #d61d1d !important; }
 
+.content {
+  position: relative; }
+
 /*# sourceMappingURL=global.css.map */

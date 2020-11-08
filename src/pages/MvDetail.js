@@ -38,7 +38,7 @@ class MvDetail extends React.Component {
                 <div>
                     <h3>mv详情</h3>
                     <div className="detailMain">
-                        <video controls={true} style={{width:"90%",margin:"auto"}} src={mvUrl.url} muted={true}/>
+                        <video controls={true} style={{width:"90%",margin:"auto"}} src={mvUrl.url}/>
                     </div>
                 {/*    mv信息显示区域*/}
                 <div className="mvDetail">

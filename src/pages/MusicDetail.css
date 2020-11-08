@@ -4,13 +4,13 @@
   height: 200px; }
 
 .musicDetail {
-  p-osition: relative; }
+  position: relative;
+  overflow: hidden; }
   .musicDetail .musicDetailMain {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%; }
+    overflow: hidden;
+    padding: 20px; }
   .musicDetail > div {
     text-align: center; }
   .musicDetail .topAction {
@@ -28,18 +28,22 @@
     align-items: center;
     font-size: 3em;
     padding: 10px;
-    color: red;
-    margin-top: 20px; }
+    color: red; }
     .musicDetail .actionBtn .pauseMusic {
       font-size: 2em; }
     .musicDetail .actionBtn > div {
       margin: 0 8px; }
   .musicDetail .backImg {
     opacity: .4;
-    top: 0;
     bottom: 0;
     height: 100%;
-    width: 100%; }
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .musicDetail .backImg img {
+      height: 100% !important;
+      width: auto !important; }
   .musicDetail .outerAlbum {
     border-radius: 50%;
     overflow: hidden;

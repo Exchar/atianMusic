@@ -15,7 +15,11 @@ class HomeCarousel extends React.Component {
                     {item.targetType==1? <Link to={{pathname:`/musicDetail/${item.targetId}`}}>
                         <Image src={item.imageUrl} preview={false}/>
                     </Link>:(item.targetType==3000?<a href={item.url}>
-                        <Image src={item.imageUrl} preview={false}/>
+                        <Image src={item.imageUrl} preview={false} placeholder={
+                            <Image
+                                src={item.imageUrl}
+                            />
+                        }/>
                     </a>:"")}
 
                     </div>
