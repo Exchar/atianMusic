@@ -1,0 +1,22 @@
+@import "css:~antd/dist/antd.min.css";
+.ant-layout-content{
+    padding: 6px;
+}
+@media (min-width: 1800px){
+    .MuiContainer-maxWidthLg{
+        max-width: 1700px !important;
+    }
+}
+.musicDetailBackImg{
+    position: relative;
+}
+.MuiContainer-root{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: 100%;
+
+}
+.ant-layout{
+    background: rgba(255,255,255,1) !important ;
+}
+

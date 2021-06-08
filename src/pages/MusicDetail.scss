@@ -1,0 +1,95 @@
+.outerAlbum{
+  width: 200px;
+  margin: auto;
+  height: 200px;
+}
+.musicDetail{
+  position: relative;
+  overflow: hidden;
+  .musicDetailMain{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+  }
+  &>div{
+    text-align: center;
+  }
+  //顶部栏
+  .topAction{
+    padding: 10px;
+    .title{
+    color: #ffffff;
+    font-size: 2em;
+      font-weight: bolder;
+      letter-spacing: .2em;
+      p{
+        text-shadow: 1px 2px 5px #cd1c1c;
+      }
+
+    }
+  }
+  //操作按钮
+  .actionBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    padding: 10px;
+    color: red;
+    .pauseMusic{
+      font-size: 2em;
+    }
+    &>div{
+      margin: 0 8px;
+    }
+  }
+  .backImg{
+    opacity: .4;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    img{
+      height: 100% !important;
+      width: auto !important;
+    }
+  }
+  .outerAlbum{
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px 0 #000000;
+    animation: rota 12s infinite linear;
+    .innerAlbum{
+      border-radius: 50%;
+      position: absolute;
+      width: 30%;
+      height: 30%;
+      z-index: 10;
+      background-color: #444444;
+      box-shadow: inset 0px 0px 20px 0 #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4em;
+      color: #ffffff;
+      text-shadow: -1px -1px 4px #ffffff;
+    }
+  }
+}
+@keyframes rota {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}

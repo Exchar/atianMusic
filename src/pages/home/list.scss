@@ -1,0 +1,59 @@
+$border-myStyle: 1px solid red;
+.homeList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .listItem{
+    width: 23%;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow:-1px 2px 3px 0 #b6b6b6;
+    position: relative;
+    overflow: hidden;
+    min-height: 3%;
+    transition: all .6s;
+    &:hover{
+      transform: scale(1.1);
+      background-color: rgba(0,0,0,.2);
+      img{
+        height: 200px;
+        transform: translateY(3px) scale(1.05);
+      }
+      .mvItemDesc{
+        transform: translateY(8px);
+        p{
+          color: #d61d1d !important;
+        }
+      }
+    }
+    .mvImgOuter{
+      height: 204px;
+      overflow: hidden;
+    }
+    img{
+      height: 204px;
+      margin: auto;
+      box-shadow: 0 0 5px 1px #c8c8c8;
+      border-radius: 4px;
+      transition: all .6s;
+    }
+    .mvItemDesc{
+      display: flex;
+      justify-content: space-around;
+      font-size: .9em;
+      transition: all .4s;
+      p{
+        text-align: left;
+        font-family: "PingFang SC";
+        color: rgb(229, 93, 164);
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: all .4s;
+      }
+    }
+  }
+}
